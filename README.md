@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PhishGuard Terminal 🛡️
 
-## Getting Started
+**PhishGuard Terminal** is a high-fidelity spear-phishing simulation and educational platform. This tool demonstrates the end-to-end "Kill Chain" of a modern social engineering attack—from automated lure delivery to real-time data exfiltration.
 
-First, run the development server:
+## 🚀 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+It is designed to train users on identifying psychological triggers used by attackers, such as urgency, authority, and professional masking.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔑 Key Features
+* **Hyper-Realistic Lure:** A Tailwind CSS-powered HR portal featuring educational "Logic Tooltips" that explain the attacker's intent behind specific data requests.
+* **Automated Delivery:** Integration with the **Resend API** to deliver personalized emails that dynamically pull the target's identity from their email address.
+* **Live Command Center:** A secure administrative dashboard inspired by "Darktrace" UI, monitoring simulation statistics in real-time.
+* **Instant Exfiltration Alerts:** Implements the **Browser Audio API** to provide an immediate "Ping" notification the moment a target interacts with the trap.
+* **Secure Backend:** Built on **Next.js 14** and **Supabase (PostgreSQL)** for robust, encrypted data handling.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technical Stack
 
-## Learn More
+| Component | Technology |
+| :--- | :--- |
+| **Frontend** | Next.js (App Router), Tailwind CSS, Lucide React |
+| **Backend** | Next.js API Routes (Serverless) |
+| **Database** | Supabase (PostgreSQL) |
+| **Email Engine** | Resend API |
+| **State Mgmt** | React Hooks (useEffect, useRef for real-time syncing) |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛡️ Security & Best Practices
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To adhere to industry standards, this project implements:
+* **Environment Secret Management:** Sensitive API keys (Resend/Supabase) are stored in `.env.local` and protected via `.gitignore`.
+* **Server-Side Logic:** Email triggers are handled via API routes to prevent exposing credentials on the client-side.
+* **Data Minimization:** Simulated exfiltration is limited to PII fields necessary for educational demonstration.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚠️ Disclaimer
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**FOR EDUCATIONAL PURPOSES ONLY.**
+This project was created to study social engineering vulnerabilities. Unauthorized use of these tactics against real users without explicit consent is illegal. The developer assumes no liability for misuse of this software.
+
+---
+
+## 👨‍💻 Developer
+**Aditya Soni**
