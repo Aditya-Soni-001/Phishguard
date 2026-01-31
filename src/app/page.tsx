@@ -21,9 +21,6 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <header className="max-w-6xl mx-auto pt-40 pb-32 px-8 text-center">
-        <span className="bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold tracking-wide uppercase">
-          Cybersecurity PBL Project 2026
-        </span>
         <h1 className="text-5xl md:text-7xl font-black text-slate-900 mt-8 mb-6 tracking-tight leading-[1.1]">
           The Human Firewall <br /> <span className="text-blue-600">Re-engineered.</span>
         </h1>
