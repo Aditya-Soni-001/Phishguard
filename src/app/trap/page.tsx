@@ -34,14 +34,14 @@ function HRPortal() {
   if (isCaught) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
-        <div className="bg-white max-w-lg w-full p-10 rounded-3xl shadow-2xl border-t-[12px] border-red-500 text-center">
-          <h1 className="text-2xl font-black text-slate-800 uppercase mb-4 text-red-600">Phishing Simulation Caught</h1>
+        <div className="bg-white max-w-lg w-full p-10 rounded-3xl shadow-2xl border-t-12 border-red-500 text-center">
+          <h1 className="text-2xl font-black text-slate-800 uppercase mb-4">Phishing Simulation Caught</h1>
           <p className="text-slate-600 mb-6 font-medium text-sm">You just submitted sensitive financial data to an untrusted portal. This was an educational security test.</p>
           <div className="bg-slate-900 text-left p-5 rounded-xl text-slate-300 text-[12px] space-y-3 mb-6 font-mono">
             <p className="text-blue-400 font-bold tracking-widest uppercase">Analysis:</p>
             <p>1. HR does not require CVV for e-KYC.</p>
-            <p>2. Domain Check: Netlify is not a corporate server.</p>
-          </div>lo
+            <p>2. Domain Check: Vercel is not a corporate server.</p>
+          </div>
         </div>
       </div>
     )
@@ -57,7 +57,7 @@ function HRPortal() {
       </nav>
 
       <div className="max-w-xl mx-auto px-6">
-        <div className="bg-white rounded-[32px] shadow-sm border border-slate-200 p-10">
+        <div className="bg-white rounded-4xl shadow-sm border border-slate-200 p-10">
           <h2 className="text-2xl font-black tracking-tight mb-8 text-slate-800">Employee e-KYC Verification</h2>
           <form onSubmit={handleCapture} className="space-y-6 text-sm">
             <div>
